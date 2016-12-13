@@ -1,0 +1,29 @@
+{
+  "name": "0.0_master",
+  "version": "1.0.0",
+  "description": "espi-assignment",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^4.0.0-alpha.5",
+    "express": "^4.14.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rossadamson/0.0_master.git"
+  },
+  "keywords": [
+    "espi-assignment",
+    "ross",
+    "adamson"
+  ],
+  "author": "ross adamson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rossadamson/0.0_master/issues"
+  },
+  "homepage": "https://github.com/rossadamson/0.0_master#readme"
+}
