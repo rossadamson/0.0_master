@@ -30,9 +30,18 @@ img{
     box-shadow: 0px 0px 0px 10px rgba(255,255,255,1);
 }
 
+img{
+    -webkit-box-shadow: 0px 0px 0px 10px rgba(255,255,255,1);
+    -moz-box-shadow: 0px 0px 0px 10px rgba(255,255,255,1);
+    box-shadow: 0px 0px 0px 10px rgba(255,255,255,1);
+}
+
 #Section1{
     background-color: #fff;
     padding-top:3rem;
+}
+#Section2{
+    background-color: #fff;
 }
 
 a.link-style{
@@ -44,10 +53,10 @@ a.link-style{
     -moz-box-shadow: inset 0px 7px 0px -8px rgba(204,204,204,1);
     -o-box-shadow: inset 0px 7px 0px -8px rgba(204,204,204,1);
     box-shadow: inset 0px 7px 0px -8px rgba(204,204,204,1);
-    -webkit-transition: all 1s ease-in-out;
-    -moz-transition: all 1s ease-in-out;
-    -o-transition: all 1s ease-in-out;
-    transition: all 1s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
 a.link-style:hover{
@@ -55,10 +64,10 @@ a.link-style:hover{
     -moz-box-shadow: inset 400px 7px 0px -8px rgba(204,204,204,1)!important;
     -o-box-shadow: inset 400px 7px 0px -8px rgba(204,204,204,1)!important;
     box-shadow: inset 400px 7px 0px -8px rgba(204,204,204,1)!important;
-    -webkit-transition: all 1s ease-in-out;
-    -moz-transition: all 1s ease-in-out;
-    -o-transition: all 1s ease-in-out;
-    transition: all 1s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
 
@@ -231,5 +240,217 @@ a.link-style:hover{
         border: 5px solid;
         color: $gold-color;
         width: 100%;
+    }
+}
+
+
+//Form styles
+
+form.contact-form{
+
+    .error{
+        color: #CD1231;
+        font-size: 1.6rem;
+        padding: 5px 0px;
+        font-weight: 900;
+        display: block;
+        margin-top: 15px;
+    }
+
+    label{
+        position: absolute;
+        top: 19px;
+        left: 25px;
+        color: $gold-color;
+        font-size: 1.4rem;
+        line-height: 1.4rem;
+        background-color: #fff;
+        width: auto;
+        padding: 0px 4px;
+        opacity: 0;
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+        &.labelfocus{
+            opacity: 1;
+            -webkit-transition: all 0.5s ease-in-out;
+            -moz-transition: all 0.5s ease-in-out;
+            -o-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
+        }
+    }
+
+
+
+    input{
+        margin-top:30px;
+        position: relative;
+        width: 100%;
+        border:2px solid;
+        padding:5px 10px;
+        font-size: 3rem;
+        color: $gold-color;
+        background-color: rgba(170,134,85,0.1);
+        box-sizing: border-box;
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+        &:focus{
+            width: 100%;
+            background-color: rgba(170,134,85,0);
+            padding:5px 13px;
+            -webkit-transition: all 0.5s ease-in-out;
+            -moz-transition: all 0.5s ease-in-out;
+            -o-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
+            & + label{
+                opacity: 1;
+            }
+        }
+
+    }
+    textarea{
+        margin-top:30px;
+        position: relative;
+        width: 100%;
+        border:2px solid;
+        padding:5px 10px;
+        font-size: 3rem;
+        color: $gold-color;
+        background-color: rgba(170,134,85,0.1);
+        box-sizing: border-box;
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+        &:focus{
+            width: 100%;
+            background-color: rgba(170,134,85,0);
+            padding:5px 13px;
+            -webkit-transition: all 0.5s ease-in-out;
+            -moz-transition: all 0.5s ease-in-out;
+            -o-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
+            & + label{
+                opacity: 1;
+            }
+        }
+
+    }
+
+    .radio-header{
+        position: relative;
+        label.check-label{
+            left:10px;
+        }
+    }
+    span{
+        width: 100%;
+        color: crimson;
+    }
+    label.check-label{
+        opacity: 1;
+        font-size: 1.4rem;
+        color: $gold-color;
+        position: relative;
+    }
+
+    input[type="radio"] {
+        display:none;
+        & ~ label{
+            font-size: 2rem;
+            margin-top:20px;
+            left:0px;
+            top: 0px;
+        }
+    }
+
+    input[type="radio"] ~ label .checker {
+        position: relative;
+        display:inline-block;
+        width:20px;
+        height:20px;
+        margin-left:20px;
+        border-radius: 50%;
+        cursor:pointer;
+        background-color: rgba(170,134,85,0.5);
+    }
+
+    input[type="radio"]:checked ~ label .checker {
+        background-color: rgba(170,134,85,0.5);
+        &:before{
+            content: ' ';
+            position: absolute;
+            top:calc(50% - 5px);
+            left:calc(50% - 5px);
+            width:10px;
+            height:10px;
+            border-radius: 50%;
+            background-color: rgba(170,134,85,1);
+        }
+    }
+
+    h2{
+        margin-top: 25px;
+        width: 50%;
+        font-size: 2rem;
+        color: $gold-color;
+    }
+
+
+    input.btn-gold{
+        width: auto;
+        margin-top: 0px;
+        border-radius: 0px;
+        font-size: 2rem;
+        -webkit-box-shadow: inset 0px 7px 0px -8px rgba(170,134,85,1);
+        -moz-box-shadow: inset 0px 7px 0px -8px rgba(170,134,85,1);
+        -o-box-shadow: inset 0px 7px 0px -8px rgba(170,134,85,1);
+        box-shadow: inset 0px 7px 0px -8px rgba(170,134,85,1);
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+        &:hover{
+            color: #fff;
+            -webkit-box-shadow: inset 400px 7px 0px -8px rgba(170,134,85,1)!important;
+            -moz-box-shadow: inset 400px 7px 0px -8px rgba(170,134,85,1)!important;
+            -o-box-shadow: inset 400px 7px 0px -8px rgba(170,134,85,1)!important;
+            box-shadow: inset 400px 7px 0px -8px rgba(170,134,85,1)!important;
+            -webkit-transition: all 0.5s ease-in-out;
+            -moz-transition: all 0.5s ease-in-out;
+            -o-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
+        }
+    }
+
+}
+
+@media(max-width:992px){
+    textarea,
+    input{
+        font-size: 2rem!important;
+        margin-top:15px!important;
+    }
+    form.contact-form label {
+    top: 3px;
+    }
+}
+
+.form-input{
+    padding:3rem 1.5rem;
+    h3{
+        font-weight: 900;
+        font-size: 3rem;
+        color: $gold-color;
+    }
+    .label{
+        font-size: 1.4rem;
+        span{
+            display: inline-block;
+            font-weight: 900;
+        }
     }
 }

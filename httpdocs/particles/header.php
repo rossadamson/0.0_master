@@ -38,6 +38,7 @@
                                 <a href="/" class="js-mobile-menu-btn text-brand-brown hidden-md-up text-white"><i class="fa fa-bars fa-3x"></i></a>
                                 <div class="js-mobile-menu">
                                     <a href="/" class="btn btn-secondary btn-lg btn-sm-block">About</a>
+                                    <a href="/contact.php" class="btn btn-secondary btn-lg btn-sm-block">Contact</a>
                                 </div>
                             </div>
                         </div>
