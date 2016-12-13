@@ -1,0 +1,28 @@
+html, body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 10px;
+  background-color: #ccc;
+    overflow-x: hidden;
+}
+
+
+@media (max-width: 991px){
+    .js-mobile-menu {
+        display: none;
+    }
+    body.show-mobile-menu .js-mobile-menu {
+        display: block;
+
+    }
+}
+
+.sidebar{
+    padding:2em;
+    margin: 2em 0;
+}
+
+.main-section{
+    padding:0em;
+    margin: 0;
+}
+
