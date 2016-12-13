@@ -17,7 +17,7 @@
                 <h3>More information</h3>
                 <p>Uristia que nia illa inctectem sitas inctet re, ut etur? Con cusdae </p>
                 <p>
-                                    <a href="/contact.php" class="btn btn-secondary btn-lg">Click here</a> </p>
+                    <a href="/" class="btn btn-secondary btn-lg">Click here</a> </p>
             </div>
         </div>
 
@@ -29,7 +29,6 @@
         </div>
     </div>
 
-    <!--<p>&copy; APT <?php echo date(Y); ?></p>-->
 </footer>
 </div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>

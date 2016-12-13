@@ -12,11 +12,11 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
     <link rel="stylesheet" href="inc/vendors/bootstrap/dist/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <link rel="stylesheet" href="inc/vendors/animate/animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,900,900i" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="inc/dist/css/style.min.css">
 
-    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
 <body>
     <!--[if lt IE 8]>
@@ -25,17 +25,19 @@
     <div class="container-fluid bg-inverse text-white">
         <div class="row">
             <div class="container">
-                <nav class="navbar">
+                <nav class="navbar animated fadeInDown">
                     <div class="container-inner">
                         <div class="row">
                             <div class="col-md-4 col-sm-2 col-xs-6">
-                                <a href="/"><i class="fa fa-commenting-o fa-3x text-white" aria-hidden="true"></i>
-</a>
+                                <a href="/">
+                                    <img src="/inc/images/logo.png" class="site-logo">
+<!--                                    <i class="fa fa-moon-o fa-3x text-white" aria-hidden="true"></i>-->
+                                </a>
                             </div>
                             <div class="col-md-8 col-sm-10 col-xs-6 text-xs-right navigation-section">
                                 <a href="/" class="js-mobile-menu-btn text-brand-brown hidden-md-up text-white"><i class="fa fa-bars fa-3x"></i></a>
                                 <div class="js-mobile-menu">
-                                    <a href="/a" class="btn btn-secondary btn-lg btn-sm-block">About</a>
+                                    <a href="/" class="btn btn-secondary btn-lg btn-sm-block">About</a>
                                 </div>
                             </div>
                         </div>
