@@ -50,6 +50,19 @@
             </div>
         </div>
     </div>
+    <div class="row p-b-6">
+        <div class="col-md-6 m-b-2">
+            <a class="btn btn-gold" id="blur-btn" href="#">
+                    Blur Shape
+                </a>
+        </div>
+
+        <div class="col-md-6 m-b-2">
+                <a class="btn btn-gold" id="move-btn" href="#">
+                    Move Shape
+                </a>
+        </div>
+    </div>
 </div>
 
 <?php include_once 'particles/footer.php'; ?>
