@@ -17,7 +17,7 @@ module.exports = function (grunt) {
             },
             build: {
                 files: {
-                    'inc/dist/js/main.min.js': 'inc/src/js/main.js'
+                    'inc/dist/js/main.min.js': 'inc/src/js/*.js'
                 }
             }
         },

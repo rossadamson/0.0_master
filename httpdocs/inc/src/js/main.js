@@ -12,8 +12,9 @@ jQuery('.js-mobile-menu-btn').on("click", function (e) {
 
 jQuery(function(){
 
-    if (typeof scrollTop == 'undefined') {
+    if (typeof scrollTop !== 'undefined') {
 
+    }else{
 
     jQuery(document).scroll(function(){
         if(jQuery(this).scrollTop() >= jQuery('.js-fade-image-one').offset().top - 500) {
@@ -21,9 +22,7 @@ jQuery(function(){
         }
     });
 
-
     //fade in second image 500px from top of window
-
 
     jQuery(document).scroll(function(){
         if(jQuery(this).scrollTop() >= jQuery('.js-fade-image-two').offset().top - 500) {
@@ -45,3 +44,5 @@ jQuery("form input").focus(function() {
 jQuery("form textarea").focus(function() {
     jQuery("." + this.id + "").addClass("labelfocus");
 });
+
+

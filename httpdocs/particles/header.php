@@ -39,6 +39,7 @@
                                 <div class="js-mobile-menu">
                                     <a href="/" class="btn btn-secondary btn-lg btn-sm-block">About</a>
                                     <a href="/contact.php" class="btn btn-secondary btn-lg btn-sm-block">Contact</a>
+                                    <a href="/experiment.php" class="btn btn-secondary btn-lg btn-sm-block">Experiment</a>
                                 </div>
                             </div>
                         </div>

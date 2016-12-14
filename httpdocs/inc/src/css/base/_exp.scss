@@ -1,0 +1,812 @@
+.shape{
+    div{
+        margin: 100px auto;
+        -ms-transform: scale(2); /* IE 9 */
+        -webkit-transform: scale(2); /* Safari */
+        transform: scale(2);
+
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+    }
+    #square {
+        width: 100px;
+        height: 100px;
+        background: $shape-color;
+    }
+    #rectangle {
+        width: 200px;
+        height: 100px;
+        background: $shape-color;
+    }
+    #circle {
+        width: 100px;
+        height: 100px;
+        background: $shape-color;
+        -moz-border-radius: 50px;
+        -webkit-border-radius: 50px;
+        border-radius: 50px;
+    }
+    #oval {
+        width: 200px;
+        height: 100px;
+        background: $shape-color;
+        -moz-border-radius: 100px / 50px;
+        -webkit-border-radius: 100px / 50px;
+        border-radius: 100px / 50px;
+    }
+    #triangle-up {
+        width: 0;
+        height: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-bottom: 100px solid $shape-color;
+    }
+    #trapezoid {
+        border-bottom: 100px solid $shape-color;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        height: 0;
+        width: 100px;
+    }
+    #star-five {
+        margin: 50px auto;
+        position: relative;
+        display: block;
+        color: $shape-color;
+        width: 0px;
+        height: 0px;
+        border-right: 100px solid transparent;
+        border-bottom: 70px solid $shape-color;
+        border-left: 100px solid transparent;
+        -moz-transform: rotate(35deg);
+        -webkit-transform: rotate(35deg);
+        -ms-transform: rotate(35deg);
+        -o-transform: rotate(35deg);
+
+        &:before {
+            border-bottom: 80px solid $shape-color;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            position: absolute;
+            height: 0;
+            width: 0;
+            top: -45px;
+            left: -65px;
+            display: block;
+            content: '';
+            -webkit-transform: rotate(-35deg);
+            -moz-transform: rotate(-35deg);
+            -ms-transform: rotate(-35deg);
+            -o-transform: rotate(-35deg);
+        }
+        &:after {
+            position: absolute;
+            display: block;
+            color: $shape-color;
+            top: 3px;
+            left: -105px;
+            width: 0px;
+            height: 0px;
+            border-right: 100px solid transparent;
+            border-bottom: 70px solid $shape-color;
+            border-left: 100px solid transparent;
+            -webkit-transform: rotate(-70deg);
+            -moz-transform: rotate(-70deg);
+            -ms-transform: rotate(-70deg);
+            -o-transform: rotate(-70deg);
+            content: '';
+        }
+    }
+    #hexagon {
+        width: 100px;
+        height: 55px;
+        background: $shape-color;
+        position: relative;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: -25px;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 25px solid $shape-color;
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: -25px;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-top: 25px solid $shape-color;
+        }
+    }
+    #octagon {
+        width: 100px;
+        height: 100px;
+        background: $shape-color;
+        position: relative;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-bottom: 29px solid $shape-color;
+            border-left: 29px solid #eee;
+            border-right: 29px solid #eee;
+            width: 42px;
+            height: 0;
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            border-top: 29px solid $shape-color;
+            border-left: 29px solid #eee;
+            border-right: 29px solid #eee;
+            width: 42px;
+            height: 0;
+        }
+    }
+    #heart {
+        position: relative;
+        width: 100px;
+        height: 90px;
+
+        &:before,
+        &:after {
+            position: absolute;
+            content: "";
+            left: 50px;
+            top: 0;
+            width: 50px;
+            height: 80px;
+            background: $shape-color;
+            -moz-border-radius: 50px 50px 0 0;
+            border-radius: 50px 50px 0 0;
+            -webkit-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            -webkit-transform-origin: 0 100%;
+            -moz-transform-origin: 0 100%;
+            -ms-transform-origin: 0 100%;
+            -o-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+        }
+        &:after {
+            left: 0;
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+            -webkit-transform-origin: 100% 100%;
+            -moz-transform-origin: 100% 100%;
+            -ms-transform-origin: 100% 100%;
+            -o-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+        }
+    }
+    #cut-diamond {
+        border-style: solid;
+        border-color: transparent transparent $shape-color transparent;
+        border-width: 0 25px 25px 25px;
+        height: 0;
+        width: 50px;
+        position: relative;
+        margin: 20px 0 50px 0;
+        &:after {
+            content: "";
+            position: absolute;
+            top: 25px;
+            left: -25px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-color: $shape-color transparent transparent transparent;
+            border-width: 70px 50px 0 50px;
+        }
+    }
+
+    div.blue{
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+
+        &#square {
+            background: $blue-color;
+        }
+        &#rectangle {
+            background: $blue-color;
+        }
+        &#circle {
+            background: $blue-color;
+        }
+        &#oval {
+            background: $shape-color;
+        }
+        &#triangle-up {
+            border-bottom: 100px solid $blue-color;
+        }
+        &#trapezoid {
+            border-bottom: 100px solid $blue-color;
+        }
+        &#star-five {
+            color: $blue-color;
+            border-bottom: 70px solid $blue-color;
+
+            &:before {
+                border-bottom: 80px solid $blue-color;
+            }
+            &:after {
+                color: $blue-color;
+                border-bottom: 70px solid $blue-color;
+            }
+        }
+        &#hexagon {
+            background: $blue-color;
+            &:before {
+                border-bottom: 25px solid $blue-color;
+            }
+            &:after {
+                border-top: 25px solid $blue-color;
+            }
+        }
+        &#octagon {
+            background: $blue-color;
+
+            &:before {
+                border-bottom: 29px solid $blue-color;
+            }
+            &:after {
+                border-top: 29px solid $blue-color;
+            }
+        }
+        &#heart {
+            &:before,
+            &:after {
+                background: $blue-color;
+            }
+            &:after {
+            }
+        }
+        &#cut-diamond {
+            border-color: transparent transparent $blue-color transparent;
+            &:after {
+                border-color: $blue-color transparent transparent transparent;
+            }
+        }
+    }
+    div.green{
+
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+
+        &#square {
+            background: $green-color;
+        }
+        &#rectangle {
+            background: $green-color;
+        }
+        &#circle {
+            background: $green-color;
+        }
+        &#oval {
+            background: $green-color;
+        }
+        &#triangle-up {
+            border-bottom: 100px solid $green-color;
+        }
+        &#trapezoid {
+            border-bottom: 100px solid $green-color;
+        }
+        &#star-five {
+            color: $green-color;
+            border-bottom: 70px solid $green-color;
+
+            &:before {
+                border-bottom: 80px solid $green-color;
+            }
+            &:after {
+                color: $green-color;
+                border-bottom: 70px solid $green-color;
+            }
+        }
+        &#hexagon {
+            background: $green-color;
+            &:before {
+                border-bottom: 25px solid $green-color;
+            }
+            &:after {
+                border-top: 25px solid $green-color;
+            }
+        }
+        &#octagon {
+            background: $green-color;
+
+            &:before {
+                border-bottom: 29px solid $green-color;
+            }
+            &:after {
+                border-top: 29px solid $green-color;
+            }
+        }
+        &#heart {
+            &:before,
+            &:after {
+                background: $green-color;
+            }
+            &:after {
+            }
+        }
+        &#cut-diamond {
+            border-color: transparent transparent $green-color transparent;
+            &:after {
+                border-color: $green-color transparent transparent transparent;
+            }
+        }
+    }
+    div.yellow{
+
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+
+        &#square {
+            background: $yellow-color;
+        }
+        &#rectangle {
+            background: $yellow-color;
+        }
+        &#circle {
+            background: $yellow-color;
+        }
+        &#oval {
+            background: $yellow-color;
+        }
+        &#triangle-up {
+            border-bottom: 100px solid $yellow-color;
+        }
+        &#trapezoid {
+            border-bottom: 100px solid $yellow-color;
+        }
+        &#star-five {
+            color: $yellow-color;
+            border-bottom: 70px solid $yellow-color;
+
+            &:before {
+                border-bottom: 80px solid $yellow-color;
+            }
+            &:after {
+                color: $yellow-color;
+                border-bottom: 70px solid $yellow-color;
+            }
+        }
+        &#hexagon {
+            background: $yellow-color;
+            &:before {
+                border-bottom: 25px solid $yellow-color;
+            }
+            &:after {
+                border-top: 25px solid $yellow-color;
+            }
+        }
+        &#octagon {
+            background: $yellow-color;
+
+            &:before {
+                border-bottom: 29px solid $yellow-color;
+            }
+            &:after {
+                border-top: 29px solid $yellow-color;
+            }
+        }
+        &#heart {
+            &:before,
+            &:after {
+                background: $yellow-color;
+            }
+            &:after {
+            }
+        }
+        &#cut-diamond {
+            border-color: transparent transparent $yellow-color transparent;
+            &:after {
+                border-color: $yellow-color transparent transparent transparent;
+            }
+        }
+    }
+    div.purple{
+
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+
+        &#square {
+            background: $purple-color;
+        }
+        &#rectangle {
+            background: $purple-color;
+        }
+        &#circle {
+            background: $purple-color;
+        }
+        &#oval {
+            background: $purple-color;
+        }
+        &#triangle-up {
+            border-bottom: 100px solid $purple-color;
+        }
+        &#trapezoid {
+            border-bottom: 100px solid $purple-color;
+        }
+        &#star-five {
+            color: $purple-color;
+            border-bottom: 70px solid $purple-color;
+
+            &:before {
+                border-bottom: 80px solid $purple-color;
+            }
+            &:after {
+                color: $purple-color;
+                border-bottom: 70px solid $purple-color;
+            }
+        }
+        &#hexagon {
+            background: $purple-color;
+            &:before {
+                border-bottom: 25px solid $purple-color;
+            }
+            &:after {
+                border-top: 25px solid $purple-color;
+            }
+        }
+        &#octagon {
+            background: $purple-color;
+
+            &:before {
+                border-bottom: 29px solid $purple-color;
+            }
+            &:after {
+                border-top: 29px solid $purple-color;
+            }
+        }
+        &#heart {
+            &:before,
+            &:after {
+                background: $purple-color;
+            }
+            &:after {
+            }
+        }
+        &#cut-diamond {
+            border-color: transparent transparent $purple-color transparent;
+            &:after {
+                border-color: $purple-color transparent transparent transparent;
+            }
+        }
+    }
+    div.orange{
+
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+
+        &#square {
+            background: $orange-color;
+        }
+        &#rectangle {
+            background: $orange-color;
+        }
+        &#circle {
+            background: $orange-color;
+        }
+        &#oval {
+            background: $orange-color;
+        }
+        &#triangle-up {
+            border-bottom: 100px solid $orange-color;
+        }
+        &#trapezoid {
+            border-bottom: 100px solid $orange-color;
+        }
+        &#star-five {
+            color: $orange-color;
+            border-bottom: 70px solid $orange-color;
+
+            &:before {
+                border-bottom: 80px solid $orange-color;
+            }
+            &:after {
+                color: $orange-color;
+                border-bottom: 70px solid $orange-color;
+            }
+        }
+        &#hexagon {
+            background: $orange-color;
+            &:before {
+                border-bottom: 25px solid $orange-color;
+            }
+            &:after {
+                border-top: 25px solid $orange-color;
+            }
+        }
+        &#octagon {
+            background: $orange-color;
+
+            &:before {
+                border-bottom: 29px solid $orange-color;
+            }
+            &:after {
+                border-top: 29px solid $orange-color;
+            }
+        }
+        &#heart {
+            &:before,
+            &:after {
+                background: $orange-color;
+            }
+            &:after {
+            }
+        }
+        &#cut-diamond {
+            border-color: transparent transparent $orange-color transparent;
+            &:after {
+                border-color: $orange-color transparent transparent transparent;
+            }
+        }
+    }
+    div.turquoise{
+
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+
+        &#square {
+            background: $turquoise-color;
+        }
+        &#rectangle {
+            background: $turquoise-color;
+        }
+        &#circle {
+            background: $turquoise-color;
+        }
+        &#oval {
+            background: $turquoise-color;
+        }
+        &#triangle-up {
+            border-bottom: 100px solid $turquoise-color;
+        }
+        &#trapezoid {
+            border-bottom: 100px solid $turquoise-color;
+        }
+        &#star-five {
+            color: $turquoise-color;
+            border-bottom: 70px solid $turquoise-color;
+
+            &:before {
+                border-bottom: 80px solid $turquoise-color;
+            }
+            &:after {
+                color: $turquoise-color;
+                border-bottom: 70px solid $turquoise-color;
+            }
+        }
+        &#hexagon {
+            background: $turquoise-color;
+            &:before {
+                border-bottom: 25px solid $turquoise-color;
+            }
+            &:after {
+                border-top: 25px solid $turquoise-color;
+            }
+        }
+        &#octagon {
+            background: $turquoise-color;
+
+            &:before {
+                border-bottom: 29px solid $turquoise-color;
+            }
+            &:after {
+                border-top: 29px solid $turquoise-color;
+            }
+        }
+        &#heart {
+            &:before,
+            &:after {
+                background: $turquoise-color;
+            }
+            &:after {
+            }
+        }
+        &#cut-diamond {
+            border-color: transparent transparent $turquoise-color transparent;
+            &:after {
+                border-color: $turquoise-color transparent transparent transparent;
+            }
+        }
+    }
+    div.pink{
+
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+
+        &#square {
+            background: $pink-color;
+        }
+        &#rectangle {
+            background: $pink-color;
+        }
+        &#circle {
+            background: $pink-color;
+        }
+        &#oval {
+            background: $pink-color;
+        }
+        &#triangle-up {
+            border-bottom: 100px solid $pink-color;
+        }
+        &#trapezoid {
+            border-bottom: 100px solid $pink-color;
+        }
+        &#star-five {
+            color: $pink-color;
+            border-bottom: 70px solid $pink-color;
+
+            &:before {
+                border-bottom: 80px solid $pink-color;
+            }
+            &:after {
+                color: $pink-color;
+                border-bottom: 70px solid $pink-color;
+            }
+        }
+        &#hexagon {
+            background: $pink-color;
+            &:before {
+                border-bottom: 25px solid $pink-color;
+            }
+            &:after {
+                border-top: 25px solid $pink-color;
+            }
+        }
+        &#octagon {
+            background: $pink-color;
+
+            &:before {
+                border-bottom: 29px solid $pink-color;
+            }
+            &:after {
+                border-top: 29px solid $pink-color;
+            }
+        }
+        &#heart {
+            &:before,
+            &:after {
+                background: $pink-color;
+            }
+            &:after {
+            }
+        }
+        &#cut-diamond {
+            border-color: transparent transparent $pink-color transparent;
+            &:after {
+                border-color: $pink-color transparent transparent transparent;
+            }
+        }
+    }
+    div.black{
+
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+
+        &#square {
+            background: $black-color;
+        }
+        &#rectangle {
+            background: $black-color;
+        }
+        &#circle {
+            background: $black-color;
+        }
+        &#oval {
+            background: $black-color;
+        }
+        &#triangle-up {
+            border-bottom: 100px solid $black-color;
+        }
+        &#trapezoid {
+            border-bottom: 100px solid $black-color;
+        }
+        &#star-five {
+            color: $black-color;
+            border-bottom: 70px solid $black-color;
+
+            &:before {
+                border-bottom: 80px solid $black-color;
+            }
+            &:after {
+                color: $black-color;
+                border-bottom: 70px solid $black-color;
+            }
+        }
+        &#hexagon {
+            background: $black-color;
+            &:before {
+                border-bottom: 25px solid $black-color;
+            }
+            &:after {
+                border-top: 25px solid $black-color;
+            }
+        }
+        &#octagon {
+            background: $black-color;
+
+            &:before {
+                border-bottom: 29px solid $black-color;
+            }
+            &:after {
+                border-top: 29px solid $black-color;
+            }
+        }
+        &#heart {
+            &:before,
+            &:after {
+                background: $black-color;
+            }
+            &:after {
+            }
+        }
+        &#cut-diamond {
+            border-color: transparent transparent $black-color transparent;
+            &:after {
+                border-color: $black-color transparent transparent transparent;
+            }
+        }
+    }
+}
+
+.dropdown{
+    .btn.btn-secondary.dropdown-toggle{
+        display: inline-block;
+        width: 100%;
+        border:2px solid;
+        padding:5px 10px;
+        font-size: 1.6rem;
+        color: $gold-color;
+        background-color: rgba(170,134,85,0.1);
+        box-sizing: border-box;
+    }
+    .dropdown-menu{
+
+        width: 100%;
+        border:2px solid;
+        padding:5px 10px;
+        font-size: 1.6rem;
+        color: $gold-color;
+        background-color: #fff;
+        box-sizing: border-box;
+}
+}
